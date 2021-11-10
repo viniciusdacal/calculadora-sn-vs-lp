@@ -1,13 +1,68 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control + .form-control {
+  margin-top: 1rem;
+}
+
+.form-section {
+  border: 1px solid #999;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 30rem;
+}
+
+.input-legend {
+  margin-top: 0.5rem;
+}
+
+.price-table td:last-child {
+  text-align: right;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+input {
+  height: 40px;
+  border-radius: 8px;
+  border: 0;
+  padding: 0 1rem;
+}
+
+table {
+  max-width: 30rem;
+  width: 100%;
+}
+
+table td:not(:first-child) {
+  padding: 0.2rem 0;
 }
