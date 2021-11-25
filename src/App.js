@@ -28,17 +28,17 @@ function App() {
   const CSLL = percent(profit, 9);
   const IRPJ = percent(profit, 15) + percent(above20k, 10);
 
-  const cofins = percent(incoming, 3);
-  const pis = percent(incoming, 0.65);
+  // const cofins = percent(incoming, 3);
+  // const pis = percent(incoming, 0.65);
   const iss = percent(incoming, issRate);
   const inssLP = calcINSS(minSalary);
 
-  const totalLP = CSLL + pis + cofins + iss + IRPJ;
+  const totalLP = CSLL + iss + IRPJ;
 
   const totalSN = calcSimples(incoming);
   const minSalarySN = percent(incoming, 28);
   const inssSN = calcINSS(minSalarySN, true);
-  const irpfSN = calcIRPF(minSalarySN);
+  const irpfSN = calcIRPF(minSalarySN, inssSN);
 
   return (
     <div className="App">
@@ -90,11 +90,11 @@ function App() {
             </tr>
             <tr>
               <td>PIS</td>
-              <td> {currency(pis)}</td>
+              <td>ISENTO</td>
             </tr>
             <tr>
               <td>COFINS</td>
-              <td> {currency(cofins)}</td>
+              <td>ISENTO</td>
             </tr>
             <tr>
               <td>ISS</td>

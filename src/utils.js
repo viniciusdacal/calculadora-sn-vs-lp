@@ -1,10 +1,11 @@
-export function calcIRPF(value) {
+export function calcIRPF(salary, inss) {
   const aliquotas = new Map();
   aliquotas.set(0, [0, 0]);
   aliquotas.set(1903.99, [7.5, 142.8]);
   aliquotas.set(2826.65, [15, 354.8]);
   aliquotas.set(3751.06, [22, 636.13]);
   aliquotas.set(4664.66, [27.5, 869.36]);
+  const value = salary - inss;
 
   let result = 0;
   for (const [min, [rate, discount]] of aliquotas.entries()) {
