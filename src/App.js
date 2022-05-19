@@ -20,7 +20,7 @@ const ProLabore = ({ irpf, inss }) => (
 function App() {
   const [incoming, setIncoming] = useState(0);
   const [issRate, setIssRate] = useState(2);
-  const [minSalary, setMinSalary] = useState(1100);
+  const [minSalary, setMinSalary] = useState(1212);
   const profit = percent(incoming, 32);
 
   const above20k = profit > 20000 ? profit - 20000 : 0;
@@ -30,10 +30,10 @@ function App() {
 
   // const cofins = percent(incoming, 3);
   // const pis = percent(incoming, 0.65);
-  const iss = percent(incoming, issRate);
+  // const iss = percent(incoming, issRate);
   const inssLP = calcINSS(minSalary);
 
-  const totalLP = CSLL + iss + IRPJ;
+  const totalLP = CSLL + IRPJ;
 
   const totalSN = calcSimples(incoming);
   const minSalarySN = percent(incoming, 28);
@@ -55,7 +55,7 @@ function App() {
             <div className="input-legend"></div>
             {currency(incoming)}
           </div>
-          <div className="form-control">
+          {/* <div className="form-control">
             <label>Salário Mínimo</label>
             <input
               type="number"
@@ -64,8 +64,8 @@ function App() {
             />
             <div className="input-legend"></div>
             {currency(minSalary)}
-          </div>
-          <div className="form-control">
+          </div> */}
+          {/* <div className="form-control">
             <label>ISS %</label>
             <input
               type="number"
@@ -74,13 +74,12 @@ function App() {
             />
             <div className="input-legend"></div>
             {currency(iss)}
-          </div>
+          </div> */}
         </section>
         <section className="form-section">
           <h2>Lucro Presumido</h2>
-          {/* <h3>Impostos Empresa</h3> */}
           <table className="price-table">
-            <tr>
+            {/* <tr>
               <td>IRPJ</td>
               <td> {currency(IRPJ)}</td>
             </tr>
@@ -98,8 +97,8 @@ function App() {
             </tr>
             <tr>
               <td>ISS</td>
-              <td> {currency(iss)}</td>
-            </tr>
+              <td>ISENTO</td>
+            </tr> */}
             <tr>
               <td>
                 <strong>Impostos Empresa</strong>
