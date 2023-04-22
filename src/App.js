@@ -20,7 +20,7 @@ const ProLabore = ({ irpf, inss }) => (
 function App() {
   const [incoming, setIncoming] = useState(0);
   const [issRate, setIssRate] = useState(2);
-  const [minSalary, setMinSalary] = useState(1212);
+  const [minSalary, setMinSalary] = useState(1320);
   const profit = percent(incoming, 32);
 
   const above20k = profit > 20000 ? profit - 20000 : 0;

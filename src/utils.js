@@ -69,7 +69,7 @@ export function calcSimples(value) {
 
 export function calcINSS(value, simples) {
   const rate = simples ? 11 : 31;
-  return percent(Math.min(7087.22, value), rate);
+  return percent(Math.min(7507.49, value), rate);
 }
 
 export const percent = (value, percent) =>
